@@ -1,0 +1,21 @@
+name: 'Parse jacoco report'
+description: 'Parse jacoco report'
+author: prajithp13
+branding:
+  icon: percent
+  color: green
+inputs:
+  paths:
+    description: "Path to jacoco csv report"
+    default: "coverage/coverage.csv"
+    required: true
+  min-coverage:
+    description: "The minimum code coverage that is required to pass for overall project"
+    default: "90"
+    required: false  
+  token:
+    description: "Github PAT to create PR comments"
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
