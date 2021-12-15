@@ -10398,8 +10398,8 @@ const parseFile = async(file) => {
                     if (data[group] == undefined) {
                         data[group] = {'line_covered': 0, 'line_missed': 0}
                     }
-                    data[group]['line_covered'] += parseInt(row.INSTRUCTION_COVERED)
-                    data[group]['line_missed'] += parseInt(row.INSTRUCTION_MISSED)
+                    data[group]['line_covered'] += parseInt(row.LINE_COVERED)
+                    data[group]['line_missed'] += parseInt(row.LINE_MISSED)
                 })
                 resolve(data)
             })
